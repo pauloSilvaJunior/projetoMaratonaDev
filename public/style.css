@@ -1,0 +1,153 @@
+
+/*Global*/
+* {
+    /*Corrige comportamento padrão de css*/
+    box-sizing: border-box;
+    margin-bottom: 4px;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #000000cc;
+}
+
+/*Estruturas*/
+header, main, footer {
+    /*Alinhamento de texto*/
+    text-align: center;
+}
+
+/*Titulos*/
+header h1, main h2 {
+    /*Espaçamentos com margin*/
+    margin-bottom: 70px;
+}
+
+.form h2 {
+    text-align: right;
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+main h2 span {
+    color: #ff4f4f;
+}
+
+/*Header*/
+.logo {
+    width: 120px;
+    margin: 70px 0;
+}
+
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ff4f4f;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+header, .form, main {
+    margin: 0 auto 70px;
+    /*limte dos elementos da pagina*/
+    max-width: 500px;
+    width: 90%;
+}
+
+/*form*/
+
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    align-items: center;
+    background-color: #ff4f4f;
+    border-radius: 6px;
+    padding: 16px 64px;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px #ffffff88 solid;
+}
+
+form button {
+    background-color: #ffffffee;
+    color: #000000ee;
+}
+
+form input {
+    background-color: transparent;
+}
+
+form input::placeholder {
+    color:  #ffffff88;
+}
+
+main .donors  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+main .donor p {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+main .blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+main .blood::before {
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    
+    /*fazer a gotinha*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px #eee solid;
+}
+
+/* Funcionalidade do javascript */
+section.form {
+    transition: all 200ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 10px;
+    margin-top: -70px;
+}
